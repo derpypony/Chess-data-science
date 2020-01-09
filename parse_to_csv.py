@@ -84,16 +84,4 @@ for name in games_names:
         game_data = game_data.append(pd.DataFrame(game_info))
 game_data.to_csv(player + '.csv', index = False)
 
-# import io
-# with open("/home/sparkle/Chess/Nakamura/Zugic,-I._vs_Nakamura,-H._2007.09.27.pgn") as pgn:
-#     game = chess.pgn.read_game(pgn)
-#     board = game.board()
-#     x = str(game.mainline_moves())
-#     y = io.StringIO(x)
-#     game_1 = chess.pgn.read_game(y)
-#     board_1 = game_1.board()
-#     print(game_1)
-    # for move in game.mainline_moves():
-    #     board.push(move)
-    #     print(game.mainline_moves())
        
