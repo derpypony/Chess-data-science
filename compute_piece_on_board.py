@@ -1,7 +1,6 @@
 import os
 import chess.pgn
 import pandas as pd
-import statistics
 
 def count_pieces(piece_map, color, move_num):
     queen = 0
