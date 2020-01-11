@@ -7,7 +7,7 @@ import pandas as pd
 
 game_data = pd.DataFrame()
 """I will use Kasparov's games to demonstrate"""
-player = "Alekhine"
+player = "Kasparov"
 """Your computer will have different path, take the path in my computer for example"""
 games_names = os.listdir("/home/sparkle/Chess/" + player)
 for name in games_names:
