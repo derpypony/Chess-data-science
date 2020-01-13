@@ -17,7 +17,7 @@ for name in games_names:
         color = "White" if player in game.headers['White'] else "Black"
         opponent_color = 'White' if color == 'Black' else 'Black'
         opponent = game.headers[opponent_color]
-        """because there are a lot of pgn files can't be read properly, we need a lot of try catch phrase"""
+        """because there are a lot of pgn files that can't be read properly, we need a lot of 'try catch' phrase"""
         try:
             player_Elo = game.headers[color + 'Elo']
         except:
@@ -47,9 +47,9 @@ for name in games_names:
             lines = str(game.mainline_moves())
         except:
             lines = None
-        """I can't find build-in function to calculate move counts of the game, so I implement one myself. 
-        However, unlike the convention that after white and black eack makes one move, move count += 1, 
-        for each player makes one move, move count +=1, that means my move count will be roughly twice the convention move count.
+        """I couldn't find build-in function to calculate move count of games, so I implement one myself. 
+        However, unlike the convention that after white makes one move, move count += 1, 
+        for each player makes one move, white and black, move count +=1, that means my move count will be roughly twice the convention move count.
         For example, 1. e4, e5 will be counted as one move in convention standard, my standard will count it as two moves. """
         if game.mainline_moves():
             moves = 0
